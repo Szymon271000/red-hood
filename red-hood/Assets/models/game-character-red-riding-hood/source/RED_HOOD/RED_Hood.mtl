@@ -1,0 +1,80 @@
+# Blender MTL File: 'red_hood_hand.blend'
+# Material Count: 7
+
+newmtl Cejas
+Ns 354.566149
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.081818 0.081818 0.081818
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\fercitoBB\\Desktop\\blender curso\\texturas\\normal_csabello2.png
+map_d eyebrows1.jpg
+
+newmtl coat_red
+Ns 359.999993
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl cuerpa
+Ns 333.243785
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.372727 0.372727 0.372727
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+refl cuerp_low_Material.001_Metallic.png
+
+newmtl ojos
+Ns 877.983756
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd ojos.png
+
+newmtl pela_tiras
+Ns 148.862294
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.062992 0.062992 0.062992
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 C:\\Users\\fercitoBB\\Desktop\\blender curso\\texturas\\normal_csabello2.png
+map_d C:\\Users\\fercitoBB\\Desktop\\blender curso\\Tutorial_game character readey\\Resourse\\Resourse\\Body texture\\fur_alpha.png
+
+newmtl pestaña1
+Ns 562.500000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.145455 0.145455 0.145455
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\fercitoBB\\Desktop\\blender curso\\texturas\\normal_csabello2.png
+map_d alpga_eyes2.jpeg
+
+newmtl vestido
+Ns 359.999993
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
