@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -12,22 +14,35 @@ public class Health : MonoBehaviour
     public Vector3 startPosition;
     public PlayerInventory playerInventory;
     public TextMeshProUGUI gems;
+    public GameObject button;
+    public GameObject cameraHolder;
 
     void Start()
     {
         uiLifes.text = lifes.ToString();
         startPosition = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         playerInventory= gameObject.GetComponent<PlayerInventory>();
+        button.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         uiLifes.text = lifes.ToString();
-        if(lifes== 0) {
-            this.gameObject.transform.position = startPosition;
-            lifes= 5;
+        if(lifes== 0)
+        {
+            GameOver();
         }
+    }
+
+    private void GameOver()
+    {
+        this.gameObject.transform.position = startPosition;
+        this.GetComponent<PlayerMovement>().enabled = false;
+        cameraHolder.GetComponent<PlayerCamera>().enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        button.SetActive(true);
     }
 
     private void OnCollisionEnter(Collision collision)
