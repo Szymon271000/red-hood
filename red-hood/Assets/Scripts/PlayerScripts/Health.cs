@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     public TextMeshProUGUI gems;
     public GameObject button;
     public GameObject cameraHolder;
+    public EnemyAI enemyAI;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class Health : MonoBehaviour
         this.gameObject.transform.position = startPosition;
         this.GetComponent<PlayerMovement>().enabled = false;
         cameraHolder.GetComponent<PlayerCamera>().enabled = false;
+        enemyAI.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         button.SetActive(true);

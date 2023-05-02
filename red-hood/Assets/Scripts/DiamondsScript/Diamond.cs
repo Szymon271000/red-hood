@@ -10,7 +10,8 @@ public class Diamond : MonoBehaviour
         if(playerInventory != null)
         {
             playerInventory.DiamondCollected();
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            //destroygameObject.SetActive(false);
         }
     }
 }
