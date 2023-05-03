@@ -548,7 +548,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: JO_prop
       parentName: JO_Hip
-      position: {x: -0.0019097067, y: -0.009522732, z: 0.0074003087}
+      position: {x: 0.00197, y: -0.00315, z: 0.00258}
       rotation: {x: 0.15665115, y: 0.39840207, z: 0.1741132, w: 0.88680375}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: JO_prop_end
@@ -564,12 +564,12 @@ ModelImporter:
     - name: JO_spineB
       parentName: JO_SpineA
       position: {x: -0, y: 0.001832759, z: -0.0005796656}
-      rotation: {x: 0.13295285, y: 0.00016512592, z: 0.00017666121, w: 0.9911224}
+      rotation: {x: 0.13295284, y: 0.00016512592, z: 0.0001766612, w: 0.9911224}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: JO_spineC
       parentName: JO_spineB
-      position: {x: 0.000003934605, y: 0.0025450082, z: -0.00041737256}
-      rotation: {x: -0.41244403, y: -0.000059238933, z: -0.00040996834, w: 0.9109829}
+      position: {x: -0, y: 0.00229, z: -0.00109}
+      rotation: {x: -0.52820057, y: -0.0000050361687, z: -0.0004141956, w: 0.8491196}
       scale: {x: 1, y: 0.9999998, z: 0.9999998}
     - name: JO_chest1_R
       parentName: JO_spineC
@@ -722,7 +722,7 @@ ModelImporter:
     - name: JO_thumbA_L
       parentName: JO_wrist_L
       position: {x: -0.0007469262, y: -0.00029378597, z: 0.0008769068}
-      rotation: {x: -0.27133048, y: -0.50533634, z: -0.14591731, w: 0.8060541}
+      rotation: {x: -0.27133048, y: -0.5053363, z: -0.14591731, w: 0.806054}
       scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
     - name: JO_thumbB_L
       parentName: JO_thumbA_L
@@ -793,7 +793,7 @@ ModelImporter:
     - name: JO_indexC_R
       parentName: JO_indexB_R
       position: {x: -0.000006629601, y: 0.000025016414, z: 0.00065896846}
-      rotation: {x: 0.6896934, y: 0.000001376742, z: 0.0069360198, w: 0.7240684}
+      rotation: {x: 0.6896934, y: 0.0000013767419, z: 0.0069360198, w: 0.72406834}
       scale: {x: 0.9999998, y: 1.0000002, z: 0.9999999}
     - name: JO_indexC_R_end
       parentName: JO_indexC_R
