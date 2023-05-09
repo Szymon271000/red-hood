@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     public GameObject button;
     public GameObject cameraHolder;
     public EnemyAI enemyAI;
+    public GameObject _gotHit;
 
     void Start()
     {
@@ -33,6 +34,15 @@ public class Health : MonoBehaviour
         if(lifes== 0)
         {
             GameOver();
+        }
+        if (_gotHit != null)
+        {
+            if (_gotHit.GetComponent<Image>().color.a > 0)
+            {
+                var color = _gotHit.GetComponent<Image>().color;
+                color.a -= 0.01f;
+                _gotHit.GetComponent<Image>().color = color;
+            }
         }
     }
 
@@ -51,6 +61,7 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyHit")
         {
+            GotHurt();
             lifes -= 1;
             playerInventory.NumberOfDiamonds -= 3;
             if(playerInventory.NumberOfDiamonds <= 3)
@@ -67,5 +78,11 @@ public class Health : MonoBehaviour
             }
             gems.text = playerInventory.NumberOfDiamonds.ToString();
         }
+    }
+    private void GotHurt()
+    {
+        var color = _gotHit.GetComponent<Image>().color;
+        color.a = 0.8f;
+        _gotHit.GetComponent<Image>().color = color;
     }
 }
