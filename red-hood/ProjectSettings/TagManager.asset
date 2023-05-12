@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Reach
   - EnemyHit
+  - Battery
+  - Gem
+  - Key
   layers:
   - Default
   - TransparentFX
