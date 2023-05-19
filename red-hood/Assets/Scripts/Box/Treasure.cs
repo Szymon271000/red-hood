@@ -27,12 +27,10 @@ public class Treasure : MonoBehaviour
     {
         if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds < 10 && opened == false)
         {
-            Debug.Log("You don't have enough diamonds");
             StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
         }
         else if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds >= 10 && opened == false)
         {
-            Debug.Log("You have enough diamonds");
             StartCoroutine(ShowMessage("Press [O] to open the box", 2));
             if (Input.GetKey(openKey) && opened == false)
             {
@@ -64,7 +62,6 @@ public class Treasure : MonoBehaviour
             numberOfKeys += 1;
             keyText.text = numberOfKeys.ToString();
         }
-        Debug.Log("Number of keys " + numberOfKeys.ToString());
         Destroy(objectInside, 2f);
     }
 
