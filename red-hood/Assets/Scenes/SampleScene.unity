@@ -265,6 +265,7 @@ MonoBehaviour:
   cameraHolder: {fileID: 376918105}
   enemyAI: {fileID: 8789521154135811536}
   _gotHit: {fileID: 49902231}
+  hit: 0
 --- !u!1 &49902231
 GameObject:
   m_ObjectHideFlags: 0
@@ -10143,6 +10144,7 @@ MonoBehaviour:
   target: {fileID: 33841861}
   chaseRange: 15
   turnSpeed: 5
+  playerHealth: {fileID: 33841867}
 --- !u!195 &8789521154135811537
 NavMeshAgent:
   m_ObjectHideFlags: 0

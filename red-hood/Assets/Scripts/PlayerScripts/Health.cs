@@ -18,13 +18,14 @@ public class Health : MonoBehaviour
     public GameObject cameraHolder;
     public EnemyAI enemyAI;
     public GameObject _gotHit;
-
+    public bool hit;
     void Start()
     {
         uiLifes.text = lifes.ToString();
         startPosition = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         playerInventory= gameObject.GetComponent<PlayerInventory>();
         button.SetActive(false);
+        hit = false;
     }
 
     // Update is called once per frame
@@ -61,6 +62,7 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyHit")
         {
+            hit = true;
             GotHurt();
             lifes -= 1;
             playerInventory.NumberOfDiamonds -= 3;

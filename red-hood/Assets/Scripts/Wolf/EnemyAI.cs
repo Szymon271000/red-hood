@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] float turnSpeed = 5f;
-
+    public Health playerHealth;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -42,6 +42,11 @@ public class EnemyAI : MonoBehaviour
         {
             AttackTarget();
         }
+        if (playerHealth.hit == true)
+        {
+            Collect();
+            playerHealth.hit = false;   
+        }
     }
 
     private void AttackTarget()
@@ -49,6 +54,10 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetBool("Attack", true);
     }
 
+    private void Collect()
+    {
+        GetComponent<Animator>().SetBool("Collect", true);
+    }
     private void ChaseTarget()
     {
         GetComponent<Animator>().SetBool("Attack", false);
