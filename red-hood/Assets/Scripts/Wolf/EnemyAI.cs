@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         if (playerHealth.hit == true)
         {
             Collect();
-            playerHealth.hit = false;   
+            playerHealth.hit = false;
         }
     }
 
@@ -61,6 +61,7 @@ public class EnemyAI : MonoBehaviour
     private void ChaseTarget()
     {
         GetComponent<Animator>().SetBool("Attack", false);
+        GetComponent<Animator>().SetBool("Collect", false);
         GetComponent<Animator>().SetTrigger("Move");
         navMeshAgent.SetDestination(target.position);
     }
