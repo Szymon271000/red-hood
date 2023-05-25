@@ -57,6 +57,7 @@ public class EnemyAI : MonoBehaviour
     private void Collect()
     {
         GetComponent<Animator>().SetBool("Collect", true);
+        navMeshAgent.isStopped = true;
     }
     private void ChaseTarget()
     {
