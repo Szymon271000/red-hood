@@ -19,8 +19,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'Head' not found\n"
+    rigImportErrors: "Avatar creation failed:\n\tTransform 'ORG-spine.003' is not
+      an ancestor of 'DEF-spine.005'\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -1473,25 +1473,23 @@ ModelImporter:
       scale: {x: 0.99999994, y: 1.0000004, z: 0.99999994}
     - name: DEF-upper_arm.L.001
       parentName: DEF-upper_arm.L
-      position: {x: 0.000000026077032, y: 0.12128506, z: 0}
-      rotation: {x: 0.0000000037252894, y: 0.000000037252896, z: 0.00000002747402,
-        w: 1}
+      position: {x: -0.000017318876, y: 0.12129785, z: 0.000008743257}
+      rotation: {x: 0.5104635, y: -0.31858805, z: -0.253709, w: 0.75733775}
       scale: {x: 1.0000002, y: 0.9999996, z: 1.0000001}
     - name: DEF-forearm.L
       parentName: DEF-upper_arm.L.001
-      position: {x: -0.00000011175871, y: 0.121285066, z: 0.000000033527613}
-      rotation: {x: 0.07473989, y: 0.000000085922, z: 0.000000065842436, w: 0.9972031}
+      position: {x: 0.0205, y: 0.1358, z: -0.0053}
+      rotation: {x: -0.0033241196, y: 0.020916542, z: -0.20113388, w: 0.9793348}
       scale: {x: 1.0000001, y: 0.9999994, z: 1.0000002}
     - name: DEF-forearm.L.001
       parentName: DEF-forearm.L
-      position: {x: -0.0000000949949, y: 0.09283834, z: 0.000000052154064}
-      rotation: {x: -0.000000046566115, y: -0.000000011175884, z: -0.00000012945381,
-        w: 1}
+      position: {x: -0.000009711831, y: 0.09283935, z: 0.0000031383527}
+      rotation: {x: -0.0228544, y: 0.0017408594, z: -0.060377654, w: 0.9979124}
       scale: {x: 0.9999993, y: 1.000001, z: 0.99999905}
     - name: DEF-hand.L
       parentName: DEF-forearm.L.001
-      position: {x: -0.000000033527613, y: 0.09283825, z: -0.000000044703484}
-      rotation: {x: -0.029068867, y: -0.0005177474, z: -0.017807607, w: 0.9994187}
+      position: {x: -0.00016862352, y: 0.092861846, z: -0.00003431694}
+      rotation: {x: -0.03789808, y: 0.32629147, z: 0.016999403, w: 0.94435614}
       scale: {x: 1.0000004, y: 0.9999995, z: 1.0000005}
     - name: DEF-hand.L_end
       parentName: DEF-hand.L
