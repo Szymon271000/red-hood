@@ -6244,7 +6244,7 @@ PrefabInstance:
     - target: {fileID: 5714257251923839327, guid: 1b4aa635225cd4d4680cc737602d6d30,
         type: 3}
       propertyPath: m_Name
-      value: redhood
+      value: red hood finish!
       objectReference: {fileID: 0}
     - target: {fileID: 8848856856462408220, guid: 1b4aa635225cd4d4680cc737602d6d30,
         type: 3}
