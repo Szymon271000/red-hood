@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     public PlayerInventory playerInventory;
     public TextMeshProUGUI gems;
     public GameObject button;
-    public GameObject cameraHolder;
+    public Player cameraHolder;
     public EnemyAI enemyAI;
     public GameObject _gotHit;
     public bool hit;
@@ -50,8 +50,7 @@ public class Health : MonoBehaviour
     private void GameOver()
     {
         this.gameObject.transform.position = startPosition;
-        this.GetComponent<PlayerMovement>().enabled = false;
-        cameraHolder.GetComponent<PlayerCamera>().enabled = false;
+        cameraHolder.GetComponent<Player>().enabled = false;
         enemyAI.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

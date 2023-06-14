@@ -19,6 +19,7 @@ public class Restart : MonoBehaviour
 
     public void ResetGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Test");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // loads current scene
     }
 }

@@ -18,7 +18,10 @@ public class BatteryPickUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Reach")
         {
-            inReach = true;
+            //inReach = true;
+            flashlight.GetComponent<FlashLight>().batteries += 1;
+            inReach = false;
+            Destroy(gameObject);
         }
     }
 

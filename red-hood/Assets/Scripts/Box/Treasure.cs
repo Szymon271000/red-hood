@@ -23,6 +23,10 @@ public class Treasure : MonoBehaviour
         opened = false;
     }
 
+    private void Update()
+    {
+        pressedKey();
+    }
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds < 10 && opened == false)
@@ -32,7 +36,7 @@ public class Treasure : MonoBehaviour
         else if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds >= 10 && opened == false)
         {
             StartCoroutine(ShowMessage("Press [O] to open the box", 2));
-            if (Input.GetKey(openKey) && opened == false)
+            if (pressedKey() == true && opened == false)
             {
                 inventory.NumberOfDiamonds -= 10;
                 diamondUI.UpdateDiamondText(inventory);
@@ -71,5 +75,14 @@ public class Treasure : MonoBehaviour
         guiText.enabled = true;
         yield return new WaitForSeconds(delay);
         guiText.enabled = false;
+    }
+
+    private bool pressedKey()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            return true;
+        }
+        return false;
     }
 }
