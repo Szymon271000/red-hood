@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour
         {
             velocity.y += jumpSpeed;
         }
-        controller.Move((input * movementSpeed + velocity)* Time.deltaTime);
+        controller.Move((input * movementSpeed + velocity) * Time.deltaTime);
     }
 
     private void UpdateLook()
