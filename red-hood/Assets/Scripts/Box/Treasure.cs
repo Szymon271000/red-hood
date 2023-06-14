@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class Treasure : MonoBehaviour
@@ -13,6 +14,7 @@ public class Treasure : MonoBehaviour
     public FlashLight flashlight;
     public GameObject objectInside;
     public TextMeshProUGUI keyText;
+    public GameObject player;
     public int numberOfKeys { get; set; }
 
 
@@ -25,18 +27,14 @@ public class Treasure : MonoBehaviour
 
     private void Update()
     {
-        pressedKey();
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds < 10 && opened == false)
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        if (distance < 2 && inventory.NumberOfDiamonds < 10 && opened == false)
         {
             StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
         }
-        else if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds >= 10 && opened == false)
-        {
-            StartCoroutine(ShowMessage("Press [O] to open the box", 2));
-            if (pressedKey() == true && opened == false)
+        else if (distance < 2 && inventory.NumberOfDiamonds >= 10 && opened == false) {
+        StartCoroutine(ShowMessage("Press [O] to open the box", 2));
+            if (pressedKey())
             {
                 inventory.NumberOfDiamonds -= 10;
                 diamondUI.UpdateDiamondText(inventory);
@@ -44,10 +42,27 @@ public class Treasure : MonoBehaviour
                 PowerUpsInBox();
                 opened = true;
             }
-
-
         }
     }
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds < 10 && opened == false)
+    //    {
+    //        StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
+    //    }
+    //    else if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds >= 10 && opened == false)
+    //    {
+    //        StartCoroutine(ShowMessage("Press [O] to open the box", 2));
+    //        if (pressedKey() == true && opened == false)
+    //        {
+    //            inventory.NumberOfDiamonds -= 10;
+    //            diamondUI.UpdateDiamondText(inventory);
+    //            GetComponent<Animator>().SetBool("Open", true);
+    //            PowerUpsInBox();
+    //            opened = true;
+    //        }
+    //    }
+    //}
 
     private void PowerUpsInBox()
     {
