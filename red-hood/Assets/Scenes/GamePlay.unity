@@ -1501,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 1533751466398468913, guid: 1828ebc988803b44eb8617aa47f33d53,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 103.26
+      value: 102.13
       objectReference: {fileID: 0}
     - target: {fileID: 1533751466398468913, guid: 1828ebc988803b44eb8617aa47f33d53,
         type: 3}
@@ -1943,10 +1943,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 3
-  movementSpeed: 5
   jumpSpeed: 5
   mass: 1
   cameraTransform: {fileID: 728125709}
+  walkSpeed: 5
+  sprintSpeed: 10
 --- !u!143 &1616389947
 CharacterController:
   m_ObjectHideFlags: 0

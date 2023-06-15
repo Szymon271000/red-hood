@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] float mouseSensitivity = 3f;
-    [SerializeField] float movementSpeed = 5f;
     [SerializeField] float jumpSpeed = 5;
     [SerializeField] float mass = 1f;
     [SerializeField] Transform cameraTransform;
 
+    public float walkSpeed = 4f;
+    public float sprintSpeed = 8f;
+    private float realSpeed;
     CharacterController controller;
     Vector3 velocity;
     Vector2 look;
@@ -49,15 +51,13 @@ public class Player : MonoBehaviour
         input += transform.forward * y;
         input += transform.right * x;
         input = Vector3.ClampMagnitude(input, 1f);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            movementSpeed += 2;
-        }
+
+        realSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
         if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y += jumpSpeed;
         }
-        controller.Move((input * movementSpeed + velocity) * Time.deltaTime);
+        controller.Move((input * realSpeed + velocity) * Time.deltaTime);
     }
 
     private void UpdateLook()
