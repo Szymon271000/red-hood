@@ -14,17 +14,19 @@ public class Health : MonoBehaviour
     public Vector3 startPosition;
     public PlayerInventory playerInventory;
     public TextMeshProUGUI gems;
-    public GameObject button;
     public Player cameraHolder;
     public EnemyAI enemyAI;
     public GameObject _gotHit;
+    public GameObject normalCanvas;
+    public GameObject gameOverCanvas;
     public bool hit;
     void Start()
     {
         uiLifes.text = lifes.ToString();
         startPosition = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         playerInventory= gameObject.GetComponent<PlayerInventory>();
-        button.SetActive(false);
+        gameOverCanvas.SetActive(false);
+        normalCanvas.SetActive(true);
         hit = false;
     }
 
@@ -50,11 +52,13 @@ public class Health : MonoBehaviour
     private void GameOver()
     {
         this.gameObject.transform.position = startPosition;
+        Time.timeScale = 0;
+        normalCanvas.SetActive(false);
+        gameOverCanvas.SetActive(true);
         cameraHolder.GetComponent<Player>().enabled = false;
         enemyAI.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        button.SetActive(true);
     }
 
     private void OnCollisionEnter(Collision collision)
