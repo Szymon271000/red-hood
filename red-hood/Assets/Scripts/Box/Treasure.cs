@@ -14,13 +14,11 @@ public class Treasure : MonoBehaviour
     public GameObject objectInside;
     public TextMeshProUGUI keyText;
     public GameObject player;
-    public int numberOfKeys { get; set; }
-
+    public Player numberOfKeys;
 
     // Start is called before the first frame update
     void Start()
     {
-        numberOfKeys = 0;
         opened = false;
     }
 
@@ -77,8 +75,8 @@ public class Treasure : MonoBehaviour
         }
         else if(objectInside.gameObject.tag == "Key")
         {
-            numberOfKeys += 1;
-            keyText.text = numberOfKeys.ToString();
+            numberOfKeys.numberOfKeys += 1;
+            keyText.text = numberOfKeys.numberOfKeys.ToString();
         }
         Destroy(objectInside, 2f);
     }

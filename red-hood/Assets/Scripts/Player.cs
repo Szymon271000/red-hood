@@ -18,13 +18,14 @@ public class Player : MonoBehaviour
     CharacterController controller;
     Vector3 velocity;
     Vector2 look;
-
+    public int numberOfKeys { get; set; }
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
     }
     void Start()
     {
+        numberOfKeys = 0;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
