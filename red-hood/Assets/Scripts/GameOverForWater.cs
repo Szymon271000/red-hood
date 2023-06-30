@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour
+public class GameOverForWater : MonoBehaviour
 {
+    public GameObject normalCanvas;
+    public GameObject gameOverCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,5 @@ public class Restart : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // loads current scene
     }
 }
