@@ -2651,8 +2651,8 @@ MonoBehaviour:
   jumpSpeed: 5
   mass: 1
   cameraTransform: {fileID: 728125709}
-  walkSpeed: 5
-  sprintSpeed: 10
+  walkSpeed: 3
+  sprintSpeed: 6
 --- !u!143 &1616389947
 CharacterController:
   m_ObjectHideFlags: 0
