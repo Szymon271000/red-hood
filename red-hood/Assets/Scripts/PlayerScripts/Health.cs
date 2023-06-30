@@ -83,10 +83,6 @@ public class Health : MonoBehaviour
             }
             gems.text = playerInventory.NumberOfDiamonds.ToString();
         }
-        else if (collision.gameObject.tag == "Water")
-        {
-            GameOver();
-        }
     }
     private void GotHurt()
     {
