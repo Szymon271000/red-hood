@@ -2422,7 +2422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1080095469
 Light:
   m_ObjectHideFlags: 0
@@ -2958,25 +2958,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd0675782a8a36e42b1b1347a7b01765, type: 3}
---- !u!1 &1363179383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 749705685911002887, guid: fd0675782a8a36e42b1b1347a7b01765,
-    type: 3}
-  m_PrefabInstance: {fileID: 1363179382}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1363179384
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363179383}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.4828997, y: 5.4585185, z: 16.71996}
-  m_Center: {x: 0.09273188, y: 2.7385752, z: 0.028973224}
 --- !u!43 &1414447167
 Mesh:
   m_ObjectHideFlags: 0
