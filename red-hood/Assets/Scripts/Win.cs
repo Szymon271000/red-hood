@@ -21,8 +21,11 @@ public class Win : MonoBehaviour
         if (collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys == 4)
         {
             Time.timeScale = 0;
+            keysOfObject.GetComponent<Player>().enabled = false;
             normalCanvas.SetActive(false);
             winCanvas.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if(collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys < 4)
         {
