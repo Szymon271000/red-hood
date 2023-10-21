@@ -75,8 +75,15 @@ public class Treasure : MonoBehaviour
         }
         else if(objectInside.gameObject.tag == "Key")
         {
-            numberOfKeys.numberOfKeys += 1;
-            keyText.text = numberOfKeys.numberOfKeys.ToString();
+            if (numberOfKeys.numberOfKeys == 0)
+            {
+                numberOfKeys.numberOfKeys += 1;
+                keyText.text = numberOfKeys.numberOfKeys.ToString();
+            }
+            else
+            {
+                return;
+            }
         }
         Destroy(objectInside, 2f);
     }

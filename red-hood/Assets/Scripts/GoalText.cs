@@ -10,7 +10,7 @@ public class GoalText : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ShowMessage("Find all four keys and get the house of grandma", 2f));
+        StartCoroutine(ShowMessage("Find the key in the box and get the house of grandma", 2f));
     }
 
     // Update is called once per frame
