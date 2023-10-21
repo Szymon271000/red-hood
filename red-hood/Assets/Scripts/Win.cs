@@ -18,7 +18,7 @@ public class Win : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys == 1)
+        if (collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys == 4)
         {
             Time.timeScale = 0;
             keysOfObject.GetComponent<Player>().enabled = false;
@@ -27,7 +27,7 @@ public class Win : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        else if(collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys < 1)
+        else if(collision.gameObject.CompareTag("Reach") && keysOfObject.numberOfKeys < 4)
         {
             StartCoroutine(ShowMessage("You don't have four keys", 2f));
         }
