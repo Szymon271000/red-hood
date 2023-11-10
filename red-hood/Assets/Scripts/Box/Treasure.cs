@@ -15,6 +15,7 @@ public class Treasure : MonoBehaviour
     public TextMeshProUGUI keyText;
     public GameObject player;
     public Player numberOfKeys;
+    public UGS_Analytic UGS_Analytic;
 
     // Start is called before the first frame update
     void Start()
@@ -67,16 +68,19 @@ public class Treasure : MonoBehaviour
         {
             flashlight.batteries += 1;
             flashlight.batteryText.text = flashlight.batteries.ToString();
+            UGS_Analytic.CurrentNumberOfBatteries((int)flashlight.batteries);
         }
         else if (objectInside.gameObject.tag == "Gem")
         {
             inventory.NumberOfDiamonds += 20;
             diamondUI.UpdateDiamondText(inventory);
+            UGS_Analytic.CurrentNumberOfDiamonds(inventory.NumberOfDiamonds);
         }
         else if(objectInside.gameObject.tag == "Key")
         {
             numberOfKeys.numberOfKeys += 1;
             keyText.text = numberOfKeys.numberOfKeys.ToString();
+            UGS_Analytic.CurrentNumberOfKeys(numberOfKeys.numberOfKeys);
         }
         Destroy(objectInside, 2f);
     }

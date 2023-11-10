@@ -6,7 +6,7 @@ public class BatteryPickUp : MonoBehaviour
 {
     private bool inReach;
     private GameObject flashlight;
-
+    public UGS_Analytic UGS_Analytic;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,7 @@ public class BatteryPickUp : MonoBehaviour
             flashlight.GetComponent<FlashLight>().batteries += 1;
             inReach = false;
             Destroy(gameObject);
+            UGS_Analytic.CurrentNumberOfBatteries((int)flashlight.GetComponent<FlashLight>().batteries);
         }
     }
 

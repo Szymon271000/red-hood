@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5759879428939610500}
   m_Layer: 0
   m_Name: battery
-  m_TagString: Untagged
+  m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6740098ccd7b2e84c9e1c38e982c1aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UGS_Analytic: {fileID: 0}
 --- !u!65 &5759879428939610500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,5 +130,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15340109, y: 0.280867, z: 0.15107058}
-  m_Center: {x: 0, y: 0.005438015, z: 0}
+  m_Size: {x: 0.12601794, y: 0.280867, z: 0.11058266}
+  m_Center: {x: -0.0011898646, y: 0.0054380163, z: -0.004232748}

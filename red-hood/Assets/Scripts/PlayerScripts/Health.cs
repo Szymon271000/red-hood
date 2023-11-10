@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +17,9 @@ public class Health : MonoBehaviour
     public GameObject normalCanvas;
     public GameObject gameOverCanvas;
     public bool hit;
+    public UGS_Analytic UGS_Analytic;
+    private bool hasEventbeenSent;
+    public int NumberOfLifes { get { return lifes; } private set { } }
     void Start()
     {
         uiLifes.text = lifes.ToString();
@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
         gameOverCanvas.SetActive(false);
         normalCanvas.SetActive(true);
         hit = false;
+        hasEventbeenSent = false;
     }
 
     // Update is called once per frame
@@ -37,6 +38,12 @@ public class Health : MonoBehaviour
         if(lifes== 0)
         {
             GameOver();
+            if (hasEventbeenSent == false)
+            {
+                UGS_Analytic.LevelFailedCustomEvent();
+                UGS_Analytic.PlayerInventoryCustomEvent(playerInventory.NumberOfDiamonds, cameraHolder.numberOfKeys, lifes);
+                hasEventbeenSent = true;
+            }
         }
         if (_gotHit != null)
         {
