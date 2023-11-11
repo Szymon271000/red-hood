@@ -113,7 +113,7 @@ public class UGS_Analytic : MonoBehaviour
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>()
             {
-                { "eventTimestamp", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
+                { "time", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
                 { "numberOfDiamonds", numberOfDiamonds},
             };
             AnalyticsService.Instance.CustomData("numberOfDiamonds", parameters);
@@ -134,7 +134,7 @@ public class UGS_Analytic : MonoBehaviour
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>()
             {
-                { "eventTimestamp", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
+                { "time", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
                 { "numberOfKeys", numberOfKeys},
             };
             AnalyticsService.Instance.CustomData("numberOfKeys", parameters);
@@ -155,8 +155,8 @@ public class UGS_Analytic : MonoBehaviour
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>()
             {
-                { "eventTimestamp", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
-                { "numberOfKeys", numberOfBatteries},
+                { "time", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss") },
+                { "numberOfBatteries", numberOfBatteries},
             };
             AnalyticsService.Instance.CustomData("numberOfBatteries", parameters);
 
