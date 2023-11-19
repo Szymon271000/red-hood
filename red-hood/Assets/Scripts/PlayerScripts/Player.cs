@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     Vector3 velocity;
     Vector2 look;
     public int numberOfKeys { get; set; }
+    public AudioClip musicClip;
+    public AudioSource audioSource;
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -27,6 +29,10 @@ public class Player : MonoBehaviour
     {
         numberOfKeys = 0;
         Cursor.lockState = CursorLockMode.Locked;
+        audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = musicClip;
+        audioSource.loop = true; // Set to true for looping
+        audioSource.Play();
     }
 
     // Update is called once per frame
