@@ -26,15 +26,15 @@ public class Treasure : MonoBehaviour
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance < 2 && inventory.NumberOfDiamonds < 10 && opened == false)
+        if (distance < 2 && inventory.NumberOfDiamonds < 5 && opened == false)
         {
             StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
         }
-        else if (distance < 2 && inventory.NumberOfDiamonds >= 10 && opened == false) {
+        else if (distance < 2 && inventory.NumberOfDiamonds >= 5 && opened == false) {
         StartCoroutine(ShowMessage("Press [O] to open the box", 2));
             if (pressedKey())
             {
-                inventory.NumberOfDiamonds -= 10;
+                inventory.NumberOfDiamonds -= 5;
                 diamondUI.UpdateDiamondText(inventory);
                 GetComponent<Animator>().SetBool("Open", true);
                 PowerUpsInBox();
