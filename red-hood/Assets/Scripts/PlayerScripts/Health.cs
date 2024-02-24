@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,8 @@ public class Health : MonoBehaviour
     public bool hit;
     public UGS_Analytic UGS_Analytic;
     private bool hasEventbeenSent;
+    public GameObject pauseCanvas;
+    public bool isPaused;
     public int NumberOfLifes { get { return lifes; } private set { } }
     void Start()
     {
@@ -29,11 +32,13 @@ public class Health : MonoBehaviour
         normalCanvas.SetActive(true);
         hit = false;
         hasEventbeenSent = false;
+        isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        pressedEsc();
         uiLifes.text = lifes.ToString();
         if(lifes== 0)
         {
@@ -53,6 +58,27 @@ public class Health : MonoBehaviour
                 color.a -= 0.01f;
                 _gotHit.GetComponent<Image>().color = color;
             }
+        }
+        if (isPaused == false)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+
+            Time.timeScale = 1;
+            pauseCanvas.SetActive(false);
+        }
+        if (isPaused == true)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            pauseCanvas.SetActive(true);
+        }
+    }
+
+    private void pressedEsc()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
         }
     }
 

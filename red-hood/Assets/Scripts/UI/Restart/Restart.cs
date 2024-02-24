@@ -21,4 +21,5 @@ public class Restart : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // loads current scene
     }
+
 }
