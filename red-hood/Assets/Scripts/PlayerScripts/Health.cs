@@ -74,20 +74,7 @@ public class Health : MonoBehaviour
             hit = true;
             GotHurt();
             lifes -= 1;
-            playerInventory.NumberOfDiamonds -= 3;
-            if(playerInventory.NumberOfDiamonds <= 3)
-            {
-                playerInventory.NumberOfDiamonds = 0;
-                gems.text = playerInventory.NumberOfDiamonds.ToString();
-                return;
-            }
-            else if(playerInventory.NumberOfDiamonds <= 0)
-            {
-                playerInventory.NumberOfDiamonds = 0;
-                gems.text = playerInventory.NumberOfDiamonds.ToString();
-                return;
-            }
-            gems.text = playerInventory.NumberOfDiamonds.ToString();
+            
         }
     }
     private void GotHurt()
