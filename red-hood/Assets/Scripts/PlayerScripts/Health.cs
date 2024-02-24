@@ -74,7 +74,6 @@ public class Health : MonoBehaviour
             hit = true;
             GotHurt();
             lifes -= 1;
-            
         }
     }
     private void GotHurt()
