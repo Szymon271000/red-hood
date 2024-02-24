@@ -1902,6 +1902,10 @@ PrefabInstance:
       propertyPath: UGS_Analytic
       value: 
       objectReference: {fileID: 1446021312}
+    - target: {fileID: 262216660, guid: c4b78232a594d1143b044914aca7f3f9, type: 3}
+      propertyPath: numberOfKeys
+      value: 
+      objectReference: {fileID: 1616389946}
     - target: {fileID: 5928373701627837484, guid: c4b78232a594d1143b044914aca7f3f9,
         type: 3}
       propertyPath: m_Name
@@ -90205,6 +90209,10 @@ PrefabInstance:
       propertyPath: UGS_Analytic
       value: 
       objectReference: {fileID: 1446021312}
+    - target: {fileID: 176087557, guid: 1828ebc988803b44eb8617aa47f33d53, type: 3}
+      propertyPath: numberOfKeys
+      value: 
+      objectReference: {fileID: 1616389946}
     - target: {fileID: 1533751466398468913, guid: 1828ebc988803b44eb8617aa47f33d53,
         type: 3}
       propertyPath: m_RootOrder

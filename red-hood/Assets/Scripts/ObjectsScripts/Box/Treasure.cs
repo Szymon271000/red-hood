@@ -21,6 +21,8 @@ public class Treasure : MonoBehaviour
     void Start()
     {
         opened = false;
+        keyText.text = numberOfKeys.numberOfKeys.ToString() + " /" + "4";
+
     }
 
     private void Update()
@@ -28,7 +30,7 @@ public class Treasure : MonoBehaviour
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < 2 && inventory.NumberOfDiamonds < 5 && opened == false)
         {
-            StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
+            StartCoroutine(ShowMessage("You don't have enough diamonds, you need five diamonds", 2));
         }
         else if (distance < 2 && inventory.NumberOfDiamonds >= 5 && opened == false) {
         StartCoroutine(ShowMessage("Press [O] to open the box", 2));
@@ -62,7 +64,7 @@ public class Treasure : MonoBehaviour
         else if(objectInside.gameObject.tag == "Key")
         {
             numberOfKeys.numberOfKeys += 1;
-            keyText.text = numberOfKeys.numberOfKeys.ToString();
+            keyText.text = numberOfKeys.numberOfKeys.ToString() + " /" + "4";
             UGS_Analytic.CurrentNumberOfKeys(numberOfKeys.numberOfKeys);
         }
         Destroy(objectInside, 2f);
