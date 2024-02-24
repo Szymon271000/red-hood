@@ -59,7 +59,6 @@ public class Health : MonoBehaviour
     private void GameOver()
     {
         this.gameObject.transform.position = startPosition;
-        Time.timeScale = 0;
         normalCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
         cameraHolder.GetComponent<Player>().enabled = false;
