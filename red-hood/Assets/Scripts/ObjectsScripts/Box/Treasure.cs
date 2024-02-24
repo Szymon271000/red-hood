@@ -39,28 +39,11 @@ public class Treasure : MonoBehaviour
                 GetComponent<Animator>().SetBool("Open", true);
                 PowerUpsInBox();
                 opened = true;
+                Destroy(this.gameObject, 5f);
             }
         }
     }
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds < 10 && opened == false)
-    //    {
-    //        StartCoroutine(ShowMessage("You don't have enough diamonds", 2));
-    //    }
-    //    else if (collision.gameObject.tag == "Reach" && inventory.NumberOfDiamonds >= 10 && opened == false)
-    //    {
-    //        StartCoroutine(ShowMessage("Press [O] to open the box", 2));
-    //        if (pressedKey() == true && opened == false)
-    //        {
-    //            inventory.NumberOfDiamonds -= 10;
-    //            diamondUI.UpdateDiamondText(inventory);
-    //            GetComponent<Animator>().SetBool("Open", true);
-    //            PowerUpsInBox();
-    //            opened = true;
-    //        }
-    //    }
-    //}
+
 
     private void PowerUpsInBox()
     {
