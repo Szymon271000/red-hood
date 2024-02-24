@@ -27,7 +27,6 @@ public class EnemyAI : MonoBehaviour
         {
             EngageTarget();
         }
-
     }
 
     private void EngageTarget()

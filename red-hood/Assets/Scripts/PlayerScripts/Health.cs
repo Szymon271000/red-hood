@@ -62,12 +62,13 @@ public class Health : MonoBehaviour
         if (isPaused == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
-
+            cameraHolder.GetComponent<Player>().enabled = true;
             Time.timeScale = 1;
             pauseCanvas.SetActive(false);
         }
         if (isPaused == true)
         {
+            cameraHolder.GetComponent<Player>().enabled = false;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             pauseCanvas.SetActive(true);
